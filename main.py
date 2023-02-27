@@ -323,3 +323,93 @@
 #     print(result)
 # finally:
 #     print("This will always exacute")
+
+
+
+# # File Detection
+# import os
+
+# path = "C:\\Users\\Sebastian Gillis\\Desktop\\CodeBro.txt"
+
+# if os.path.exists(path):
+#     print("That location exists!")
+#     if os.path.isfile(path):
+#         print("That is a file")
+#     elif os.path.isdir(path):
+#         print("That is a directory")
+# else:
+#     print("That location doesn't exist!")
+
+
+
+# # Read A File In Python
+# # with open('test.txt') as file:
+# #     print(file.read())
+
+# # print(file.closed)
+
+# try:
+#     with open('test.txt') as file:
+#         print(file.read())
+# except FileNotFoundError:
+#     print("That file was not found")
+
+
+
+# # Writing A File
+# text="Yooooooo\nThis is some text\nHave a good one"
+
+# with open('text1.txt','w') as file:
+#     file.write(text)
+
+
+
+# # Copy A File
+# import shutil
+
+# shutil.copyfile('text1.txt','copy.txt') 
+
+
+
+# # Move A File
+# import os
+
+# source = "copy.txt"
+# destination = "C:\\Users\\Sebastian Gillis\\Desktop\\copy.txt"
+
+# try:
+#     if os.path.exists(destination):
+#         print("There is already a file there")
+#     else:
+#         os.replace(source,destination)
+#         print(source+ "was moved")
+# except FileNotFoundError:
+#     print(source+" was not found")
+
+
+
+# # Delete A File
+# import os
+
+# path = 'test.txt'
+
+# try:
+#     os.remove(path)
+# except FileExistsError:
+#     print("That file was not found")
+# except PermissionError:
+#     print("You do not have permission to delete that")
+# else:
+#     print(path+" was deleted")
+
+
+
+# # Modules
+# # from messages import hello,bye
+# # from messages import *
+# import messages as msg
+
+# msg.hello()
+# msg.bye()
+
+# # help("modules")
