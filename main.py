@@ -262,4 +262,64 @@
 
 
 
-# 
+# # String Format
+# animal = "cow"
+# item = "moon"
+
+# print("The {} jumped over the {}".format(animal, item))
+# print("The {1} jumped over the {0}".format(item, animal))
+# print("The {animal} jumped over the {item}".format(item="moon", animal="cow"))
+
+# text = "The {} jumped over the {}"
+# print(text.format(animal,item))
+
+# name = "cat"
+# print("Hello, my name is {:10}. Nice to meet you".format(name))
+# print("Hello, my name is {:>10}. Nice to meet you".format(name))
+# print("Hello, my name is {:^10}. Nice to meet you".format(name))
+
+# number = 1000
+# print("The number pi is {:.2f}".format(number))
+# print("The number pi is {:,}".format(number))
+# print("The number pi is {:b}".format(number))
+# print("The number pi is {:o}".format(number))
+# print("The number pi is {:x}".format(number))
+# print("The number pi is {:e}".format(number))
+
+
+
+# # Random Numbers
+# import random
+
+# x = random.randint(1,6)
+# y = random.random()
+
+# myList = ['rock', 'paper', 'scissors']
+# z = random.choice(myList)
+
+# cards = [1,2,3,4,5,6,7,8,9,"J","Q","K","A"]
+
+# random.shuffle(cards)
+
+# print(cards)
+
+
+
+# # Exception Handing?
+# try:
+#     numerator = int(input("Enter a number to divide: "))
+#     denominator = int(input("Enter a number to divide by: "))
+#     result = numerator / denominator
+# except ZeroDivisionError as e:
+#     print(e)
+#     print("You can't divide by zero")
+# except ValueError as e:
+#     print(e)
+#     print("Enter only numbers please")
+# except Exception as e:
+#     print(e)
+#     print("something went wrong :(")
+# else:
+#     print(result)
+# finally:
+#     print("This will always exacute")
