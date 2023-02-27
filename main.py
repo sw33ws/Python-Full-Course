@@ -146,4 +146,44 @@
 
 
 
+# # Dictionaries
+# capitals = {'USA':'Washington DC',
+#             'India':'New Dehli',
+#             'China':'Beijing',
+#             'Russia':'Moscow'}
+
+# capitals.update({'Germany':'Berlin'})
+# capitals.update({'USA':'Las Vegas'})
+# capitals.pop('China')
+# capitals.clear()
+
+# # print(capitals['Russia'])
+# # print(capitals['Germany'])
+# # # a safe was to check if something is in your Dictionaries
+# # print(capitals.get('Germany'))
+# # print(capitals.keys())
+# # print(capitals.values())
+# # print(capitals.items())
+
+# for key,value in capitals.items():
+#     print(key, value)
+
+
+
+# # Index Operator
+# name = "cat Cool!"
+
+# # if(name[0].islower()):
+# #     name = name.capitalize()
+
+# first_name = name[:3].upper()
+# last_name = name[4:].lower()
+# last_character = name[-1]
+
+# print(first_name)
+# print(last_name)
+# print(last_character)
+
+
+
 # 
