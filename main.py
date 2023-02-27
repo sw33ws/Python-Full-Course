@@ -186,4 +186,80 @@
 
 
 
+# # functions
+# def hello(first_name,last_name, year):
+#     print("Hello World!")
+#     print("The date is "+str(year))
+#     print("My name is "+first_name+" "+last_name)
+
+# hello("Cat","Cool",2023)
+
+
+
+# # Return Statement
+# def multiply(number1,number2):
+#     return number1 * number2
+
+# x = multiply(6,8)
+
+# print(x)
+
+
+
+# # Keyword Arguments
+# def hello(first,middle,last):
+#     print("Hello "+first+" "+middle+" "+last)
+
+# hello(last="Cool",middle="Epic",first="Cat")
+
+
+
+# # Nested Function Calls
+# # num = input("Enter a whole positive number: ")
+# # num = float(num)
+# # num = abs(num)
+# # num = round(num)
+# # print(num)
+
+# print((round(abs(float(input("Enter a whole positive number: "))))))
+
+
+
+# # Variable Scope
+# # load order: Local, Enclosing, Global, Built-in
+# name = "Cat"
+
+# def display_name():
+#     name = "Cool"
+#     print(name)
+
+# display_name()
+# print(name)
+
+
+
+# # Args
+# # The most important thing is the *
+# def add(*args):
+#     sum = 0
+#     for i in args:
+#         sum += i
+#     return sum
+
+# print(add(1,2,3))
+
+
+
+# # Kwargs
+# # The most important thing is the **
+# def hello(**kwargs):
+#     # print("Hello "+kwargs['first']+" "+kwargs['last'])
+#     print("Hello ",end="")
+#     for key,value in kwargs.items():
+#         print(value,end="")
+
+# hello(title="Mr.", first="Cat ",middle="Epic ",last="Cool")
+
+
+
 # 
