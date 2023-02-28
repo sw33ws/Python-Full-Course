@@ -469,4 +469,57 @@
 
 
 
-# Multilevel Inheritance
+# # Multilevel Inheritance
+# class Organism:
+
+#     alive = True
+
+# class Animal(Organism):
+
+#     def eat(self):
+#         print("This animal is eating")
+
+# class Cat(Animal):
+
+#     def meow(self):
+#         print("This cat is meowing")
+
+# cat = Cat()
+# print(cat.alive)
+# cat.eat()
+# cat.meow()
+
+
+
+# # Multiple Inheritance
+# class Prey:
+
+#     def flee(self):
+#         print("This animal flees")
+
+# class Predator:
+
+#     def hunt(self):
+#         print("This animal is hunting")
+
+# class Rabbit(Prey):
+#     pass
+
+# class Hawk(Predator):
+#     pass
+
+# class Fish(Prey, Predator):
+#     pass
+
+# rabbit = Rabbit()
+# hawk = Hawk()
+# fish = Fish()
+
+# rabbit.flee()
+# hawk.hunt()
+# fish.flee()
+# fish.hunt()
+
+
+
+# Method Overriding
