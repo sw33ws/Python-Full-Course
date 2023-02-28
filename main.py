@@ -413,3 +413,60 @@
 # msg.bye()
 
 # # help("modules")
+
+
+
+# # Object Oriented Programming OOP And Class Variables
+# from car import Car
+
+# car_1 = Car("Chevy","Corvette",2021,"blue")
+# car_2 = Car("Ford","Mustang",2022,"red")
+
+# print(car_1.make)
+# print(car_1.model)
+# print(car_1.year)
+# print(car_1.color)
+
+# Car.wheels = 2
+
+# car_1.drive()
+# car_2.stop()
+# print(car_1.wheels)
+
+
+
+# # Inheritance
+# class animal:
+#     alive = True
+
+#     def eat(self):
+#         print("This animal is eating")
+
+#     def sleep(self):
+#         print("This animal is sleeping")
+
+# class Rabbit(animal):
+#     def run(self):
+#         print("This rabbit is running")
+# class Fish(animal):
+#     def swim(self):
+#         print("This fish is swimming")
+# class Hawk(animal):
+#     def fly(self):
+#         print("This hawk is flying")
+
+# rabbit = Rabbit()
+# fish = Fish()
+# hawk = Hawk()
+
+# # print(rabbit.alive)
+# # fish.eat()
+# # hawk.sleep()
+
+# rabbit.run()
+# fish.swim()
+# hawk.fly()
+
+
+
+# Multilevel Inheritance
