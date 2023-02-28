@@ -673,4 +673,55 @@
 
 
 
-# 
+# # Duck Typing
+# class Duck:
+#     def walk(self):
+#         print("This duck is walking")
+    
+#     def talk(self):
+#         print("This duck is qwuacking")
+
+# class Chicken:
+
+#     def walk(self):
+#         print("This chicken is walking")
+    
+#     def talk(self):
+#         print("This chicken is clucking")
+
+# class Person():
+
+#     def catch(self, duck):
+
+#         duck.walk()
+#         duck.talk()
+#         print("You cought the critter")
+
+# duck = Duck()
+# chicken = Chicken()
+# person = Person()
+
+# person.catch(chicken)
+
+
+
+# # Walrus Operator
+# # happy = True
+# # print(happy)
+
+# # print(happy := True)
+
+# # foods = list()
+# # while True:
+# #     food = input("what food do you like?: ")
+# #     if food == "quit":
+# #         break
+# #     foods.append(food)
+
+# foods = list()
+# while food := input("What food do you like?: ") != "quit":
+#     foods.append(food)
+
+
+
+# Functions To Variables
