@@ -724,4 +724,90 @@
 
 
 
-# Functions To Variables
+# # Functions To Variables
+# def hello():
+#     print("Hello")
+
+# # This shows where this function is stored in my computer's memory
+# # Its displayed in hexadecimal
+# print(hello)
+
+# say = print
+# say("This works!")
+
+
+
+# # Higher Order Functions
+# # def loud(text):
+# #     return text.upper()
+
+# # def quiet(text):
+# #     return text.lower()
+
+# # def hello(func):
+# #     text = func("Hello")
+# #     print(text)
+
+# # hello(loud)
+# # hello(quiet)
+
+# def divisor(x):
+#     def dividend(y):
+#         return y / x
+#     return dividend
+
+# divide = divisor(2)
+# print(divide(10))
+
+
+
+# #  Lambda Functions
+# # def double(x):
+# #     return x * 2
+
+# # print(double(5))
+
+# double = lambda x:x * 2
+# multiply = lambda x, y: x * y
+# add = lambda x, y, z: x + y + z
+# full_name = lambda first_name, last_name: first_name + last_name
+# age_check = lambda age:True if age >= 18 else False
+
+# print(double(5))
+# print(multiply(5,6))
+# print(add(5,6,7))
+# print(full_name("Cat", "Cool"))
+# print(age_check(18))
+
+
+
+# # # Sort
+# # students = ("Squidward","Sandy","Patrick","Spongebob","Mr.Krabs")
+
+# # # sort sorts only lists, alphabetically eg tuples don't work
+# # # students.sort(reverse=True)
+
+# # # If you make it a function you can add tiples
+# # sorted_students = sorted(students, reverse=True)
+
+# # for i in students:
+# #     print(i)
+
+
+# students = [
+#     ("Squidward", "F", 50),
+#     ("Sandy", "A", 33),
+#     ("Patrick", "D", 36),
+#     ("Spongebob", "B", 20),
+#     ("Mr.Krabs", "C", 78)
+# ]
+
+# grade = lambda grades: grades[1]
+# students.sort(key=grade, reverse=True)
+
+# for i in students:
+#     print(i)
+
+
+
+# 
