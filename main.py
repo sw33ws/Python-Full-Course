@@ -522,4 +522,155 @@
 
 
 
-# Method Overriding
+# # Method Overriding
+# class Animal:
+
+#     def eat(self):
+#         print("This animal is eating")
+
+# class Rabbit(Animal):
+    
+#     def eat(self):
+#         print("This rabbit is eating a carrot")
+
+# rabbit = Rabbit()
+# rabbit.eat()
+
+
+
+# #  Method Chaining
+# class Car:
+
+#     def turn_on(self):
+#         print("You start the engine")
+#         # return self is what allows you to method call
+#         return self
+    
+#     def drive(self):
+#         print("You drive the car")
+#         return self
+
+#     def brake(self):
+#         print("You step on the brakes")
+#         return self
+
+#     def turn_off(self):
+#         print("You turn off the engine")
+#         return self
+
+# car = Car()
+
+# # You can have it go onto the next line with a \
+# car.turn_on()\
+# .drive().brake().turn_off()
+
+
+
+# # Super Function
+# class Rectangle:
+
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width
+
+# class Square(Rectangle):
+
+#     def __init__(self, length, width):
+#         # The super part is from the parent class Rectangle
+#         super().__init__(length, width)
+
+#     def area(self):
+#         return self.length*self.width
+
+# class Cube(Rectangle):
+
+#     def __init__(self, length, width, height):
+#         super().__init__(length, width)
+#         self.height = height
+    
+#     def volume(self):
+#         return self.length*self.width*self.height
+
+# square = Square(3, 3)
+# cube = Cube(3, 3, 3)
+
+# print(square.area())
+# print(cube.volume())
+
+
+
+# # Abstract Classes
+# from abc import ABC, abstractclassmethod
+
+# class Vehicle(ABC):
+
+#     @abstractclassmethod
+#     def go(self):
+#         pass
+
+#     @abstractclassmethod
+#     def stop(self):
+#         pass
+
+# class Car(Vehicle):
+
+#     def go(self):
+#         print("You drive the car")
+    
+#     def stop(self):
+#         print("This car is stopped")
+
+# class Motorcycle(Vehicle):
+
+#     def go(self):
+#         print("You ride the motorcycle")
+
+#     def stop(self):
+#         print("This motorcycle is stopped")
+
+# # vehicle = Vehicle()
+# car = Car()
+# motorcycle = Motorcycle()
+
+# # vehicle.go()
+# car.go()
+# motorcycle.go()
+# car.stop()
+# motorcycle.stop()
+
+
+
+# # Object As Arguments
+# class Car:
+
+#     color = None
+
+# class Motorcycle:
+
+#     color = None
+
+# def change_color(car, color):
+
+#     car.color = color
+
+# car_1 = Car()
+# car_2 = Car()
+# car_3 = Car()
+
+# bike1 = Motorcycle()
+
+# change_color(car_1,"red")
+# change_color(car_2,"white")
+# change_color(car_3,"blue")
+
+# change_color(bike1,"black")
+
+# print(car_1.color)
+# print(car_2.color)
+# print(car_3.color)
+
+# print(bike1.color)
+
+
+
+# 
