@@ -942,4 +942,79 @@
 
 
 
-# If _name_=='__main__'
+# # # if __name__=='__main__'
+# # if __name__=='__main__':
+# #     print("running this module directly")
+# # else:
+# #     print("running other module indirectly")
+
+# def hello():
+#     print("Hello!")
+
+
+
+# # Time Module
+# import time
+
+# # print(time.ctime(0)) # Its expressed in seconds, also its starting from epoch or when your computer thinks time began
+
+# # # print(time.time())
+# # print(time.ctime(time.time()))
+
+# # # time_object = time.gmtime() # Universal Time
+# # time_object = time.localtime()                                  # This are the iterables tm_year=2023, tm_mon=3, tm_mday=1, tm_hour=11, tm_min=10, tm_sec=42, tm_wday=2, tm_yday=60, tm_isdst=0
+# # print(time_object)                                              # The iterables mean year, month, day, hour, minute, seconds, day of the week, day of the year, daylight savings hour
+# # local_time = time.strftime("%B %d %Y %H:%M:%S", time_object)    # strftime, requires a format, and time object, Python time docs here https://docs.python.org/3/library/time.html
+# # print(local_time)
+
+# # time_string = "20 April, 2023"
+# # time_object = time.strptime(time_string,"%d %B, %Y")
+# # print(time_object)
+
+# time_tuple = (2023, 4, 20, 4, 20, 0, 0, 0, 0)
+# # time_string = time.asctime(time_tuple)
+# time_string = time.mktime(time_tuple)       # mktime displays it in seconds from the epoch of your computer
+# print(time_string)
+
+
+
+# Threading
+import threading
+import time
+
+def eat_breakfast():
+    time.sleep(3)
+    print("You eat breakfast")
+
+def drink_coffee():
+    time.sleep(4)
+    print("You drink coffee")
+
+def study():
+    time.sleep(5)
+    print("You finish studying")
+
+x = threading.Thread(target=eat_breakfast, args=())
+x.start()
+
+y = threading.Thread(target=drink_coffee, args=())
+y.start()
+
+z = threading.Thread(target=study, args=())
+z.start()
+
+x.join()    # These are joined into the main Thread
+y.join()
+z.join()
+
+# eat_breakfast()
+# drink_coffee()
+# study()
+
+print(threading.active_count())
+print(threading.enumerate())
+print(time.perf_counter())      # This shows how long it takes the main thread to finish creating 3 different threads
+
+
+
+# Daemon Threads
