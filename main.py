@@ -978,43 +978,120 @@
 
 
 
-# Threading
-import threading
-import time
+# # Threading
+# import threading
+# import time
 
-def eat_breakfast():
-    time.sleep(3)
-    print("You eat breakfast")
+# def eat_breakfast():
+#     time.sleep(3)
+#     print("You eat breakfast")
 
-def drink_coffee():
-    time.sleep(4)
-    print("You drink coffee")
+# def drink_coffee():
+#     time.sleep(4)
+#     print("You drink coffee")
 
-def study():
-    time.sleep(5)
-    print("You finish studying")
+# def study():
+#     time.sleep(5)
+#     print("You finish studying")
 
-x = threading.Thread(target=eat_breakfast, args=())
-x.start()
+# x = threading.Thread(target=eat_breakfast, args=())
+# x.start()
 
-y = threading.Thread(target=drink_coffee, args=())
-y.start()
+# y = threading.Thread(target=drink_coffee, args=())
+# y.start()
 
-z = threading.Thread(target=study, args=())
-z.start()
+# z = threading.Thread(target=study, args=())
+# z.start()
 
-x.join()    # These are joined into the main Thread
-y.join()
-z.join()
+# x.join()    # These are joined into the main Thread
+# y.join()
+# z.join()
 
-# eat_breakfast()
-# drink_coffee()
-# study()
+# # eat_breakfast()
+# # drink_coffee()
+# # study()
 
-print(threading.active_count())
-print(threading.enumerate())
-print(time.perf_counter())      # This shows how long it takes the main thread to finish creating 3 different threads
+# print(threading.active_count())
+# print(threading.enumerate())
+# print(time.perf_counter())      # This shows how long it takes the main thread to finish creating 3 different threads
 
 
 
-# Daemon Threads
+# # Daemon Threads
+# import threading
+# import time
+
+# def timer():
+#     print()
+#     count = 0
+#     while True:
+#         time.sleep(1)
+#         count += 1
+#         print("Loggedin for: ",count, "seconds")
+
+# x = threading.Thread(target=timer, daemon=True)
+# x.start()
+
+# # If a thread is already running you can't change it mid way through
+# # x.setDaemon(True)
+# print(x.isDaemon())
+
+# answer = input("Do you wish to exit?")
+
+
+
+# # Multiprocessing
+# from multiprocessing import Process, cpu_count
+# import time
+
+# def counter(num):
+#     count = 0
+#     while count < num:
+#         count += 1
+
+# def main():
+
+#     print(cpu_count)
+    
+#     a = Process(target=counter, args=(250000000,))
+#     b = Process(target=counter, args=(250000000,))
+#     c = Process(target=counter, args=(250000000,))
+#     d = Process(target=counter, args=(250000000,))
+
+#     a.start()
+#     b.start()
+#     c.start()
+#     d.start()
+
+#     a.join()
+#     b.join()
+#     c.join()
+#     d.join()
+
+#     print("Finished in:",time.perf_counter(),"seconds")
+
+# if __name__ == '__main__':
+#     main()
+
+
+
+# # GUI Windows
+# from tkinter import *
+
+# # widgets = GUI elements: buttons, textboxes, labels, images
+# # windows = serves as a container to hold or contain these widgets
+
+# window = Tk()                           # instantiate an instance of a window, not yet displaying it
+# window.geometry("420x420")              # This decides the size of the window
+# window.title("First GUI Program")       # This sets the title of the window
+
+# # icon = PhotoImage(file='icon.png')    # This is ment to change the file image, but is erroring for some reason, idk why
+# # window.iconphoto(True, icon)
+
+# window.config(background="#5cfcff")     # This changes the windows background color
+
+# window.mainloop()                       # This is displaying the window, and place it on our screen, while listening for events
+
+
+
+# Labels
