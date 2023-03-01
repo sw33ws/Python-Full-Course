@@ -810,4 +810,136 @@
 
 
 
-# 
+# # Map Function
+# # A map is made up of a function, and a iterable, The function in the example below is to_euro, and the iterable is the tuple
+# store = [("shirt",20.00),
+#          ("pants",25.00),
+#          ("jacket",50.00),
+#          ("socks",10.00)
+# ]
+
+# # This is USD to Euro its 1 USD to every 0.95 Euro
+# to_euro = lambda data: (data[0], data[1] * 0.95)
+# to_dollars = lambda data: (data[0], data[1] / 0.95)
+
+# store_euros = list(map(to_euro, store))
+
+# for i in store_euros:
+#     print(i)
+
+
+
+# # Filter Function
+# friends = [
+#     ("Rachel",19),
+#     ("Monica",18),
+#     ("Phoebe",17),
+#     ("Joey",16),
+#     ("Chandler",21),
+#     ("Ross",20),
+# ]
+
+# age = lambda data: data[1] >= 18
+
+# drinking_buddies = list(filter(age, friends))
+
+# for i in drinking_buddies:
+#     print(i)
+
+
+
+# # Reduce Function
+# import functools
+
+# # letters = ["H","E","L","L","O"]
+# # word = functools.reduce(lambda x, y: x + y,letters)
+# # print(word)
+
+# factorial = [5,4,3,2,1]
+# result = functools.reduce(lambda x, y: x * y, factorial)
+# print(result)
+
+
+
+# # List Comprehension
+# # This creates a list of the numbers 1 through 10 with the numbers squared
+# squares = []                #create an empty list
+# # for i in range(1,11):       #create a for loop
+# #     squares.append(i * i)   #define what each loop iteration should do
+# # print(squares)
+
+# # list = [expression for item in iterable]
+# squares = [i * i for i in range(1,11)]
+# print(squares)
+
+
+# students = [100,90,80,70,60,50,40,30,0]
+
+# # passed_students = list(filter(lambda x: x >= 60, students))
+
+# # passed_students = [i for i in students if i >= 60]
+
+# passed_students = [i if i >= 60 else "Failed" for i in students]
+
+# print(passed_students)
+
+
+
+# # Dictionary Comprehension
+# cities_in_F = {
+#     'New York': 32,
+#     'Boston':75,
+#     'Los Angeles':100,
+#     'Chicago':50
+# }
+
+# # desc_citties = {key: ("WARM" if value >= 40 else "COLD") for (key,value) in cities_in_F.items()}
+# # print(desc_citties)
+
+# def check_temp(value):
+#     if value >= 70:
+#         return "Hot"
+#     elif 69>= value >= 40:
+#         return "Warm"
+#     else:
+#         return "Cold"
+
+# desc_citties = {key: check_temp(value) for (key,value) in cities_in_F.items()}
+# print(desc_citties)
+
+# cites_in_C = {key: round((value-32) * (5 / 9)) for (key,value) in cities_in_F.items()}
+# print(cites_in_C)
+
+# weather = {
+#     'New York':"snowing",
+#     'Boston':"sunny",
+#     'Los Angeles':"sunny",
+#     'Chicago':"cloudy"
+# }
+# sunny_weather = {key: value for (key,value) in weather.items() if value == "sunny"}
+# print(sunny_weather)
+
+
+
+# # Zip Function
+# usernames = ["Cat", "Epic", "Cool"]
+# passwords = ("password", "abc123", "guest")
+# login_date = ["1/1/2023", "1/2/2023", "1/3/2023"]
+
+# # users = zip(usernames, passwords)
+# # users = list(zip(usernames, passwords))
+# # users = dict(zip(usernames, passwords))
+# users = zip(usernames, passwords, login_date)
+
+# # for i in users:
+# #     print(i)
+
+# # for key,value in users.items():
+# #     print(key +" : " + value)
+
+# for i in users:
+#     print(i)
+
+
+
+# If _name_=='__main__'
