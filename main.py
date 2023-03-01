@@ -1085,8 +1085,8 @@
 # window.geometry("420x420")              # This decides the size of the window
 # window.title("First GUI Program")       # This sets the title of the window
 
-# # icon = PhotoImage(file='icon.png')    # This is ment to change the file image, but is erroring for some reason, idk why
-# # window.iconphoto(True, icon)
+# icon = PhotoImage(file='logo.png')
+# window.iconphoto(True, icon)
 
 # window.config(background="#5cfcff")     # This changes the windows background color
 
@@ -1094,4 +1094,34 @@
 
 
 
-# Labels
+# # Labels
+# from tkinter import *
+
+# # label = an area widget that holds text and/or an image within a window
+
+# window = Tk()
+# window.geometry("420x420") 
+# window.title("Labels") 
+
+# photo = PhotoImage(file='logo.png')
+
+# label = Label(window,
+#               text="Hello World",
+#               font=('Arial',40,'bold'),
+#               fg='#00FF00',
+#               bg='black',
+#               relief=RAISED,
+#               bd=10,
+#               padx=20,
+#               pady=20,
+#               image=photo,
+#               compound='bottom')
+
+# label.pack()  # places it at the top middle
+# # label.place(x=100,y=100) # places it at cords of your choice
+
+# window.mainloop()
+
+
+
+# Buttons
