@@ -1124,4 +1124,161 @@
 
 
 
-# Buttons
+# # Buttons
+# from tkinter import *
+
+# count = 0
+
+# def click():
+#     global count
+#     count += 1
+#     print(count)
+
+# window = Tk()
+# window.geometry("420x420") 
+# window.title("Button") 
+
+# photo = PhotoImage(file="logo.png")
+
+# button = Button(window,
+#                 text="Click Me!",
+#                 command=click,
+#                 font=("Comic Sans",30),
+#                 fg="#00FF00",
+#                 bg="black",
+#                 activeforeground="#00FF00",
+#                 activebackground="black",
+#                 state=ACTIVE,             # State is how the button works, the button is active by default
+#                 image=photo,
+#                 compound="bottom")
+# button.pack()
+
+# window.mainloop()
+
+
+
+# # Entrybox
+# from tkinter import *
+
+# def submit():
+#     username = entry.get()
+#     print("Hello "+username)
+#     entry.config(state=DISABLED)
+
+# def delete():
+#     entry.delete(0, END)
+
+# def backspace():
+#     entry.delete(len(entry.get())-1, END)
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("Entrybox") 
+
+# entry = Entry(window,
+#               font=("Arial",50),
+#               fg="#00FF00",
+#               bg="black",
+#               show="*")
+
+# # entry.insert(0,'Type Your Username')
+# entry.pack(side=LEFT)
+
+# submit_button = Button(window,text="Submit",command=submit)
+# submit_button.pack(side=RIGHT)
+
+# delete_button = Button(window,text="Delete",command=delete)
+# delete_button.pack(side=RIGHT)
+
+# backspace_button = Button(window,text="Backspace",command=backspace)
+# backspace_button.pack(side=RIGHT)
+
+# window.mainloop()
+
+
+
+# # Checkbox
+# from tkinter import *
+
+# def display():
+#     if(x.get() == 1):
+#         print("you agree")
+#     else:
+#         print("You don't agree")
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("CheckBox") 
+
+# x = IntVar()
+
+# photo = PhotoImage(file='logo.png')
+
+# check_button = Checkbutton(window,
+#                            text="I agree to something",
+#                            variable=x,
+#                            onvalue=1,
+#                            offvalue=0,
+#                            command=display,
+#                            font=('Arial',20),
+#                            fg='#00FF00',
+#                            bg='black',
+#                            activeforeground='#00FF00',
+#                            activebackground='black',
+#                            padx=25,
+#                            pady=10,
+#                            image=photo,
+#                            compound="left")
+
+# check_button.pack()
+
+# window.mainloop()
+
+
+
+# Radio Button
+from tkinter import *
+
+food = ["pizza","hamburger","hotdog"]
+
+def order():
+    if(x.get()==0):     # x is the veriable stored in the radiobuttons
+        print("You ordered pizza!")  
+    elif(x.get()==1):
+        print("You ordered a hamburger!")   
+    elif(x.get()==2):
+        print("You ordered a hotdog!")
+    else:
+        print("huh")
+
+window = Tk()
+# window.geometry("420x420") 
+window.title("Radio Buttons") 
+
+pizzaImage = PhotoImage(file="images\\pizza.png")
+burgerImage = PhotoImage(file="images\\burger.png")
+hotdogImage = PhotoImage(file="images\\hotdog.png")
+
+foodImages = [pizzaImage,burgerImage,hotdogImage]
+
+x = IntVar()
+
+for index in range(len(food)):
+    radiobutton = Radiobutton(window,
+                              text=food[index],     # adds text to radio buttons
+                              variable=x,           # groups radiobuttons together if they share the same variable
+                              value=index,          # this assigns each radiobutton a different value
+                              padx=25,
+                              font=("Impact",50),
+                              image=foodImages[index],
+                              compound='left',      # adds image and text 
+                              indicatoron=0,        # removes the radiobuttons, and replaces them with push buttons
+                              width=375,
+                              command=order)        
+    radiobutton.pack(anchor=W)    #You can also add W without the ''
+
+window.mainloop()
+
+
+
+# Scale
