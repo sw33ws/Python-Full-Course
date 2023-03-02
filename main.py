@@ -1281,4 +1281,51 @@
 
 
 
-# Scale
+# # Scale
+# from tkinter import *
+
+# def submit():
+#     print("The temperature is: "+str(scale.get())+" degrees °C")
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("Scale") 
+
+# hotImage = PhotoImage(file='images\\burger.png')
+# hotLabel = Label(image=hotImage)
+# hotLabel.pack()
+
+# scale = Scale(window,
+#               from_=100,
+#               to=0,
+#               length=600,
+#               orient=VERTICAL,      # orientation of scale
+#               font=('Consolas',20),
+#               tickinterval=10,      #adds numbers beside the scale
+#               showvalue=0,          # hide current value
+#               resolution= 5,        # increases the rate in which the scale goes up
+#               troughcolor='#69EAFF',# This sets the color of the sliding bar
+#               fg='#FF1C00',
+#               bg='#111111')
+# scale.set(((scale['from']-scale['to'])/2)+scale['to'])    # scale.set(num) sets the starting point, this math makes the starting point always in the middle
+# scale.pack()
+
+# coldImage = PhotoImage(file='images\\hotdog.png')
+# coldLabel = Label(image=coldImage)
+# coldLabel.pack()
+
+# button = Button(window,
+#                 text='submit',
+#                 command=submit)
+# button.pack()
+
+# window.mainloop()
+
+
+
+# Listbox
+from tkinter import *
+
+window = Tk()
+# window.geometry("420x420") 
+window.title("Listbox") 
