@@ -1394,7 +1394,7 @@
 
 # # Messagebox
 # from tkinter import *
-# from tkinter import messagebox
+# from tkinter import messagebox # submodule
 
 # def click():
 #     # messagebox.showinfo(title='This is an info message box',message='You are a person')
@@ -1446,4 +1446,28 @@
 
 
 
-# 
+# # Colorchooser
+# from tkinter import *
+# from tkinter import colorchooser # submodule
+
+# def click():
+#     # color = colorchooser.askcolor()
+#     # print(color)
+#     # colorHex = color[1]
+#     # window.config(bg=colorHex)
+#     # print(colorHex)
+
+#     window.config(bg=colorchooser.askcolor()[1])
+
+# window = Tk()
+# window.geometry("420x420") 
+# window.title("colorchooser") 
+
+# button = Button(text='click me',command=click)
+# button.pack()
+
+# window.mainloop()
+
+
+
+# Text Area
