@@ -1323,9 +1323,73 @@
 
 
 
-# Listbox
-from tkinter import *
+# # Listbox
+# from tkinter import *
 
-window = Tk()
-# window.geometry("420x420") 
-window.title("Listbox") 
+# food = ["pizza","pasta","garlic bread","soup","salad"]
+
+# def submit():
+#     # print("You have ordered: ")
+#     # print(listbox.get(listbox.curselection()))    # This works for submitting one item at a time
+
+#     food_submit = []
+
+#     for index in listbox.curselection():
+#         food_submit.insert(index,listbox.get(index))
+    
+#     print("You have ordered: ")
+#     for index in food_submit:
+#         print(index)
+
+# def add():
+#     listbox.insert(listbox.size(),entryBox.get())
+#     listbox.config(height=listbox.size())           # This changes the listbox size to fit the new item
+
+# def delete():
+#     # listbox.delete(listbox.curselection())        # This works for deleting one item at a time
+#     # listbox.config(height=listbox.size()) 
+
+#     for index in reversed(listbox.curselection()):  # This has to be reversed as the index changes when you delete something
+#         listbox.delete(index)
+#     listbox.config(height=listbox.size()) 
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("Listbox") 
+
+# listbox = Listbox(window,
+#                   bg="#f7ffde",
+#                   font=("Constantia",35),
+#                   width=12,
+#                   selectbackground='#f54251',     # I changed the text highlight color
+#                   selectmode=MULTIPLE)
+# listbox.pack()
+
+# for i in range(len(food)):      # I added a list, and loop instead of typing it out 5 times over like he did
+#     listbox.insert(i,food[i])
+
+# listbox.config(height=listbox.size())
+
+# entryBox = Entry(window)
+# entryBox.pack()
+
+# submitButton = Button(window,
+#                       text="submit",
+#                       command=submit)
+# submitButton.pack()
+
+# addButton = Button(window,
+#                       text="add",
+#                       command=add)
+# addButton.pack()
+
+# deleteButton = Button(window,
+#                       text="delete",
+#                       command=delete)
+# deleteButton.pack()
+
+# window.mainloop()
+
+
+
+# Messagebox
