@@ -1236,48 +1236,48 @@
 
 
 
-# Radio Button
-from tkinter import *
+# # Radio Button
+# from tkinter import *
 
-food = ["pizza","hamburger","hotdog"]
+# food = ["pizza","hamburger","hotdog"]
 
-def order():
-    if(x.get()==0):     # x is the veriable stored in the radiobuttons
-        print("You ordered pizza!")  
-    elif(x.get()==1):
-        print("You ordered a hamburger!")   
-    elif(x.get()==2):
-        print("You ordered a hotdog!")
-    else:
-        print("huh")
+# def order():
+#     if(x.get()==0):     # x is the veriable stored in the radiobuttons
+#         print("You ordered pizza!")  
+#     elif(x.get()==1):
+#         print("You ordered a hamburger!")   
+#     elif(x.get()==2):
+#         print("You ordered a hotdog!")
+#     else:
+#         print("huh")
 
-window = Tk()
-# window.geometry("420x420") 
-window.title("Radio Buttons") 
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("Radio Buttons") 
 
-pizzaImage = PhotoImage(file="images\\pizza.png")
-burgerImage = PhotoImage(file="images\\burger.png")
-hotdogImage = PhotoImage(file="images\\hotdog.png")
+# pizzaImage = PhotoImage(file="images\\pizza.png")
+# burgerImage = PhotoImage(file="images\\burger.png")
+# hotdogImage = PhotoImage(file="images\\hotdog.png")
 
-foodImages = [pizzaImage,burgerImage,hotdogImage]
+# foodImages = [pizzaImage,burgerImage,hotdogImage]
 
-x = IntVar()
+# x = IntVar()
 
-for index in range(len(food)):
-    radiobutton = Radiobutton(window,
-                              text=food[index],     # adds text to radio buttons
-                              variable=x,           # groups radiobuttons together if they share the same variable
-                              value=index,          # this assigns each radiobutton a different value
-                              padx=25,
-                              font=("Impact",50),
-                              image=foodImages[index],
-                              compound='left',      # adds image and text 
-                              indicatoron=0,        # removes the radiobuttons, and replaces them with push buttons
-                              width=375,
-                              command=order)        
-    radiobutton.pack(anchor=W)    #You can also add W without the ''
+# for index in range(len(food)):
+#     radiobutton = Radiobutton(window,
+#                               text=food[index],     # adds text to radio buttons
+#                               variable=x,           # groups radiobuttons together if they share the same variable
+#                               value=index,          # this assigns each radiobutton a different value
+#                               padx=25,
+#                               font=("Impact",50),
+#                               image=foodImages[index],
+#                               compound='left',      # adds image and text 
+#                               indicatoron=0,        # removes the radiobuttons, and replaces them with push buttons
+#                               width=375,
+#                               command=order)        
+#     radiobutton.pack(anchor=W)    #You can also add W without the ''
 
-window.mainloop()
+# window.mainloop()
 
 
 
