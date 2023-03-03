@@ -1537,6 +1537,8 @@
 #                                         ("HTML File",".html"),
 #                                         ("All Files",".*")
 #                                     ])
+#     if file is None:
+#         return
 #     filetext = str(text.get(1.0,END))
 #     # filetext = input("Enter some text I guess")
 #     file.write(filetext)
@@ -1554,3 +1556,7 @@
 # text.pack()
 
 # window.mainloop()
+
+
+
+# Menubar
