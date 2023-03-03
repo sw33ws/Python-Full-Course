@@ -1470,4 +1470,87 @@
 
 
 
-# Text Area
+# # Text Area, Text Widget
+# from tkinter import *
+
+# def submit():
+#     input = text.get("1.0",END)
+#     print(input)
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("Text Area") 
+
+# text = Text(window,
+#             bg='light yellow',
+#             font=("Ink Free",25),
+#             height=8,
+#             width=20,
+#             padx=20,
+#             pady=20,
+#             fg='purple')
+# text.pack()
+
+# button = Button(window,
+#                 text='submit',
+#                 command=submit)
+# button.pack()
+
+# window.mainloop()
+
+
+
+# # Open A File
+# from tkinter import *
+# from tkinter import filedialog
+
+# def openFile():
+#     filepath = filedialog.askopenfilename(initialdir="C:\\Users\\Sebastian Gillis\\Documents\\Coding\\GitHub Repo\\Python Bro Code",
+#                                           title="Open File okay?",
+#                                           filetypes=(("text files","*.txt"),
+#                                           ("all files","*.*")))
+#     file = open(filepath,'r')
+#     print(file.read())
+#     file.close()
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("Open A File") 
+
+# button = Button(text="Open",
+#                 command=openFile)
+# button.pack()
+
+# window.mainloop()
+
+
+
+# # Save A File
+# from tkinter import *
+# from tkinter import filedialog
+
+# def saveFile():
+#     file = filedialog.asksaveasfile(initialdir="C:\\Users\\Sebastian Gillis\\Documents\\Coding\\GitHub Repo\\Python Bro Code",
+#                                     defaultextension='.txt',
+#                                     filetypes=[
+#                                         ("Text File",".txt"),
+#                                         ("HTML File",".html"),
+#                                         ("All Files",".*")
+#                                     ])
+#     filetext = str(text.get(1.0,END))
+#     # filetext = input("Enter some text I guess")
+#     file.write(filetext)
+#     file.close()
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("Open A File") 
+
+# button = Button(text='save',
+#                 command=saveFile)
+# button.pack()
+
+# text = Text(window)
+# text.pack()
+
+# window.mainloop()
