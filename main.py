@@ -1601,3 +1601,99 @@
 # editMenu.add_command(label="Paste",command=paste)
 
 # window.mainloop()
+
+
+
+# # Frames
+# from tkinter import *
+
+# window = Tk()
+# window.geometry("420x420") 
+# window.title("Frames") 
+
+# frame = Frame(window,bg="pink",bd=5,relief=SUNKEN)
+# # frame.pack(side=BOTTOM)
+# frame.place(x=100,y=100)
+
+# Button(frame,text="W",font=("Consolas",25),width=3).pack(side=TOP)
+# Button(frame,text="A",font=("Consolas",25),width=3).pack(side=LEFT)
+# Button(frame,text="S",font=("Consolas",25),width=3).pack(side=LEFT)
+# Button(frame,text="D",font=("Consolas",25),width=3).pack(side=LEFT)
+
+# window.mainloop()
+
+
+
+# #  New Windows
+# from tkinter import *
+
+# def create_window():
+#     new_window = Tk()   # you can also use TopLevel(), this is a new window ontop of the other window and if the old window is closed, the new one will too 
+#     window.destroy()                    # Tk() is a new window all together
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("New Windows") 
+
+# Button(window,text="create new window",command=create_window).pack()
+
+# window.mainloop()
+
+
+
+# #  Window Tabs
+# from tkinter import *
+# from tkinter import ttk
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("Window Tabs") 
+
+# notebook = ttk.Notebook(window)     # This is a widdget that manges a collection of windows/displays
+
+# tab1 = Frame(notebook)
+# tab2 = Frame(notebook)
+
+# notebook.add(tab1,text="Tab 1")
+# notebook.add(tab2,text="Tab 2")
+# notebook.pack(expand=True,fill="both")          # This is will fill space not otherwise used, Fill will fill space on x and y axis
+
+# Label(tab1,text="Hello, This is tab1",width=50,height=25).pack()
+# Label(tab2,text="Hello, This is tab2",width=50,height=25).pack()
+
+# window.mainloop()
+
+
+
+# # Grid Manager
+# from tkinter import *
+
+# window = Tk()
+# window.geometry("420x420") 
+# window.title("Grid") 
+
+# titleLabel = Label(window,text="Enter your info",font=("Arial",25)).grid(row=0,column=0,columnspan=2)
+
+# firstNameLabel = Label(window,text="First name: ",width=20,bg="red").grid(row=1,column=0)
+# firstNameEntry = Entry(window).grid(row=1,column=1)
+
+# lastNameLabel = Label(window,text="Last name: ",bg="green").grid(row=2,column=0)
+# lastNameEntry = Entry(window).grid(row=2,column=1)
+
+# emailLabel = Label(window,text="email: ",bg="blue",width=30).grid(row=3,column=0)
+# emailEntry = Entry(window).grid(row=3,column=1)
+
+# submitButton = Button(window,text="Submit").grid(row=4,column=0,columnspan=2)
+
+# window.mainloop()
+
+
+
+#
+# from tkinter import *
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("New Windows") 
+
+# window.mainloop()
