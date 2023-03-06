@@ -1753,27 +1753,161 @@
 
 
 
-# Keyboard Events
+# # Keyboard Events
+# from tkinter import *
+
+# def doSomething(event):
+#     # print("You pressed " + event.keysym)
+#     label.config(text=event.keysym)
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("Keyboard Events") 
+
+# window.bind("<Key>",doSomething)    # <Return> for enter, <Key> for any key
+
+# label = Label(window,font=("Helvetica",100))
+# label.pack()
+
+# window.mainloop()
+
+
+
+# # Mouse Events
+# from tkinter import *
+
+# def doSomething(event):
+#     print("You did something! " + str(event.x) + ", " + str(event.y))
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("Mouse Events") 
+
+# # window.bind("<Button-1>",doSomething)         # <Button-1> is left click, <Button-2> is clicking on the scroll wheel, <Button-3> is a right mouse click
+# # window.bind("<ButtonRelease>",doSomething)
+# # window.bind("<Enter>",doSomething)            # When you mouse enters the window, it will begin the function
+# # window.bind("<Leave",doSomething)
+# window.bind("<Motion>",doSomething)
+
+# window.mainloop()
+
+
+
+# # Drag and Drop
+# from tkinter import *
+
+# def drag_start(event):
+#     widget = event.widget
+#     widget.startX = event.x
+#     widget.startY = event.y
+
+# def drag_motion(event):
+#     widget = event.widget
+#     x = widget.winfo_x() - widget.startX + event.x
+#     y = widget.winfo_y() - widget.startY + event.y
+#     widget.place(x=x,y=y)
+
+# window = Tk()
+# window.geometry("420x420") 
+# window.title("Drag and Drop") 
+
+# label = Label(window,bg="red",width=10,height=5)
+# label.place(x=0,y=0)
+
+# label2 = Label(window,bg="blue",width=10,height=5)
+# label2.place(x=100,y=100)
+
+# label.bind("<Button-1>",drag_start)
+# label.bind("<B1-Motion>",drag_motion)
+
+# label2.bind("<Button-1>",drag_start)
+# label2.bind("<B1-Motion>",drag_motion)
+
+
+# window.mainloop()
+
+
+
+# # Move Images w/ keys
+# from tkinter import *
+
+# def move_up(event):
+#     label.place(x=label.winfo_x(), y=label.winfo_y()-10)
+
+# def move_down(event):
+#     label.place(x=label.winfo_x(), y=label.winfo_y()+10)
+
+# def move_left(event):
+#     label.place(x=label.winfo_x()-10, y=label.winfo_y())
+
+# def move_right(event):
+#     label.place(x=label.winfo_x()+10, y=label.winfo_y())
+
+# window = Tk()
+# window.geometry("500x500") 
+# window.title("Move Images w/ keys") 
+
+# window.bind("<w>",move_up)
+# window.bind("<s>",move_down)
+# window.bind("<a>",move_left)
+# window.bind("<d>",move_right)
+
+# # Arrow keys
+# window.bind("<Up>",move_up)
+# window.bind("<Down>",move_down)
+# window.bind("<Left>",move_left)
+# window.bind("<Right>",move_right)
+
+# myimage = PhotoImage(file="images\\racing.png")
+# label = Label(window,image=myimage)
+# label.place(x=0,y=0)
+
+# window.mainloop()
+
+
+
+# Move Images on a Canvas
 from tkinter import *
 
-def doSomething(event):
-    # print("You pressed " + event.keysym)
-    label.config(text=event.keysym)
+def move_up(event):
+    canvas.move(myimage,0,-10)
+
+def move_down(event):
+    canvas.move(myimage,0,10)
+
+def move_left(event):
+    canvas.move(myimage,-10,0)
+
+def move_right(event):
+    canvas.move(myimage,10,0)
+
 
 window = Tk()
 # window.geometry("420x420") 
-window.title("New Windows") 
+window.title("Move Images on a Canvas") 
 
-window.bind("<Key>",doSomething)    # <Return> for enter, <Key> for any key
+window.bind("<w>",move_up)
+window.bind("<s>",move_down)
+window.bind("<a>",move_left)
+window.bind("<d>",move_right)
 
-label = Label(window,font=("Helvetica",100))
-label.pack()
+# Arrow keys
+window.bind("<Up>",move_up)
+window.bind("<Down>",move_down)
+window.bind("<Left>",move_left)
+window.bind("<Right>",move_right)
+
+canvas = Canvas(window,width=500,height=500)
+canvas.pack()
+
+photoImage = PhotoImage(file="images\\racing.png")
+myimage = canvas.create_image(0,0,image=photoImage,anchor=NW)
 
 window.mainloop()
 
 
 
-# 
+#
 # from tkinter import *
 
 # window = Tk()
