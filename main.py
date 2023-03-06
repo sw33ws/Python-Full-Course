@@ -1866,44 +1866,85 @@
 
 
 
-# Move Images on a Canvas
-from tkinter import *
+# # Move Images on a Canvas
+# from tkinter import *
 
-def move_up(event):
-    canvas.move(myimage,0,-10)
+# def move_up(event):
+#     canvas.move(myimage,0,-10)
 
-def move_down(event):
-    canvas.move(myimage,0,10)
+# def move_down(event):
+#     canvas.move(myimage,0,10)
 
-def move_left(event):
-    canvas.move(myimage,-10,0)
+# def move_left(event):
+#     canvas.move(myimage,-10,0)
 
-def move_right(event):
-    canvas.move(myimage,10,0)
+# def move_right(event):
+#     canvas.move(myimage,10,0)
 
 
-window = Tk()
-# window.geometry("420x420") 
-window.title("Move Images on a Canvas") 
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("Move Images on a Canvas") 
 
-window.bind("<w>",move_up)
-window.bind("<s>",move_down)
-window.bind("<a>",move_left)
-window.bind("<d>",move_right)
+# window.bind("<w>",move_up)
+# window.bind("<s>",move_down)
+# window.bind("<a>",move_left)
+# window.bind("<d>",move_right)
 
-# Arrow keys
-window.bind("<Up>",move_up)
-window.bind("<Down>",move_down)
-window.bind("<Left>",move_left)
-window.bind("<Right>",move_right)
+# # Arrow keys
+# window.bind("<Up>",move_up)
+# window.bind("<Down>",move_down)
+# window.bind("<Left>",move_left)
+# window.bind("<Right>",move_right)
 
-canvas = Canvas(window,width=500,height=500)
-canvas.pack()
+# canvas = Canvas(window,width=500,height=500)
+# canvas.pack()
 
-photoImage = PhotoImage(file="images\\racing.png")
-myimage = canvas.create_image(0,0,image=photoImage,anchor=NW)
+# photoImage = PhotoImage(file="images\\racing.png")
+# myimage = canvas.create_image(0,0,image=photoImage,anchor=NW)
 
-window.mainloop()
+# window.mainloop()
+
+
+
+# # Animations
+# from tkinter import *
+# import time
+
+# WIDTH = 500
+# HEIGHT = 500
+
+# xVelocity = 3
+# yVelocity = 2
+
+# window = Tk()
+# # window.geometry("420x420") 
+# window.title("Animations") 
+
+# canvas = Canvas(window,width=WIDTH,height=HEIGHT)
+# canvas.pack()
+
+# background_image = PhotoImage(file="logo.png")
+# background = canvas.create_image(0,0,image=background_image,anchor=NW)
+
+# photoImage = PhotoImage(file="images\\racing.png")
+# myimage = canvas.create_image(0,0,image=photoImage,anchor=NW)
+
+# image_width = photoImage.width()
+# image_height = photoImage.height()
+
+# while True:     # if your running a game, you may use: while running
+#     coordinates = canvas.coords(myimage)
+#     print(coordinates)
+#     if(coordinates[0]>=(WIDTH-image_width) or coordinates[0]<0):
+#         xVelocity = -xVelocity
+#     if(coordinates[1]>=(HEIGHT-image_height) or coordinates[1]<0):
+#         yVelocity = -yVelocity
+#     canvas.move(myimage,xVelocity,yVelocity)
+#     window.update()
+#     time.sleep(0.01)
+
+# window.mainloop()
 
 
 
