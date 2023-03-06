@@ -1756,9 +1756,18 @@
 # Keyboard Events
 from tkinter import *
 
+def doSomething(event):
+    # print("You pressed " + event.keysym)
+    label.config(text=event.keysym)
+
 window = Tk()
 # window.geometry("420x420") 
 window.title("New Windows") 
+
+window.bind("<Key>",doSomething)    # <Return> for enter, <Key> for any key
+
+label = Label(window,font=("Helvetica",100))
+label.pack()
 
 window.mainloop()
 
