@@ -2045,4 +2045,27 @@
 
 
 
-# Python File With Command Prompt
+# # Python File With Command Prompt
+# print("Hello World!")
+
+# name = input("What's your name?")
+
+# print("Hello "+name)
+
+
+
+# pip
+# Go to the video https://www.youtube.com/watch?v=XKHEtdqhLK8 its part 96
+
+
+
+# Python file to exacuteable
+# You may need to disable windows security to run the exe
+# You need pip, and pyinstaller pip install pyinstaller
+
+# You may need too convert your image to an ico
+# pyinstaller -F -w -i icon.ico file.py
+
+
+
+# Calculator Program
