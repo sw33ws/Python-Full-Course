@@ -1979,11 +1979,70 @@
 
 
 
-#
+# # Clock
 # from tkinter import *
+# from time import *
+
+# def update():
+#     time_string = strftime("%I:%M:%S %p")
+#     time_label.config(text=time_string)
+
+#     day_string = strftime("%A")
+#     day_label.config(text=day_string)
+
+#     date_string = strftime("%B %d, %Y")
+#     date_label.config(text=date_string)
+
+#     # You could use time_label.after(1000,update) too update just one
+#     window.after(1000,update)
 
 # window = Tk()
 # # window.geometry("420x420") 
-# window.title("New Windows") 
+# window.title("Clock") 
+
+# time_label = Label(window,font=("Arial",50),fg="#00FF00",bg="black")
+# time_label.pack()
+
+# day_label = Label(window,font=("Ink Free",25))
+# day_label.pack()
+
+# date_label = Label(window,font=("Ink Free",30))
+# date_label.pack()
+
+# update()
 
 # window.mainloop()
+
+
+
+# # Send An Email
+# import smtplib
+
+# sender = 'sender@gmail.com'
+# receiver = 'receiver@gmail.com'
+# password = 'password'
+# subject = 'Python email test'
+# body = 'I wrote an email'
+
+# message = f"""From: First Last{sender}
+# To: First Last{receiver}
+# subject: {subject}\n
+# {body}
+# """
+
+# # 587 is the default mail submission number
+# server = smtplib.SMTP("smtp.gmail.com", 587)
+# server.starttls()
+
+# try:
+#     server.login(sender,password)
+#     print("Logged in...")
+#     server.sendmail(sender, receiver, message)
+#     print("Email has been sent")
+
+# except smtplib.SMTPAuthenticationError:
+#     print("unable to sign in")
+
+
+
+# Python File With Command Prompt
