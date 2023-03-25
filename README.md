@@ -1,6 +1,6 @@
 # Python-Code-Bro
 
-I'm following along with Code Bro's Python Full Course For Free
+Code Bro's 12 hour Python Full Course
 
 Open the main.py file to see the most important code!
 
